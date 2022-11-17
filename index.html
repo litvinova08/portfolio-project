@@ -4,47 +4,99 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Portfolio Project</title>
   </head>
   <body>
+    <!-- First Page -->
     <section class="first-page">
-      <div class="box">
-        <h1 class="box__my-name">Margarita Litvinova</h1>
-        <p class="box__title">Software Developer, Animated sub heading</p>
+      <div class="name-box">
+        <h1 class="name-box__my-name">Margarita Litvinova</h1>
+        <p class="name-box__title">Software Developer</p>
       </div>
 
       <div class="icons">
-        <img src="./images/github.png" alt="git icon" />
-        <img src="./images/linkedin.png" alt="LinkedIn icon" />
-        <img src="./images/email.png" alt="Email icon" />
+        <div class="icons__container">
+          <a href="https://github.com/litvinova08" target="”_blank”">
+            <img src="./images/github.png" alt="git icon"
+          /></a>
+        </div>
+        <div class="icons__container">
+          <a
+            href="https://www.linkedin.com/in/margarita-l-44860b15b/"
+            target="”_blank”"
+          >
+            <img src="./images/linkedin.png" alt="LinkedIn icon" />
+          </a>
+        </div>
+        <div class="icons__container icons__container--smaller">
+          <a href="mailto:ma.litvinova08@gmail.com">
+            <img src="./images/email.png" alt="Email icon"
+          /></a>
+        </div>
       </div>
     </section>
 
+    <!-- Second Page -->
     <section class="about-page">
-      <div class="about-page__card">
-        <ul>
-          <li>CSS</li>
-          <li>HTML</li>
-          <li>JS</li>
+      <div class="about-page__card card">
+        <ul class="card__list">
+          <li class="card__element card__element--tech">CSS</li>
+          <li class="card__element card__element--tech">SCSS</li>
+          <li class="card__element card__element--tech">HTML</li>
+          <li class="card__element card__element--tech">Javascript</li>
+          <li class="card__element card__element--tech">Java</li>
+          <li class="card__element card__element--tech">More Skills</li>
+          <li class="card__element card__element--tech">Again</li>
+        </ul>
+
+        <ul class="card__list">
+          <li class="card__element card__element--tools">VS Code</li>
+          <li class="card__element card__element--tools">IDEA</li>
+          <li class="card__element card__element--tools">Lorem</li>
+          <li class="card__element card__element--tools">One More</li>
+          <li class="card__element card__element--tools">Extra Tool</li>
+          <li class="card__element card__element--tools">TBC</li>
+        </ul>
+
+        <ul class="card__list">
+          <li class="card__element card__element--soft">Problem-Solving</li>
+          <li class="card__element card__element--soft">Teamwork</li>
+          <li class="card__element card__element--soft">Presentaion</li>
+          <li class="card__element card__element--soft">Time-Management</li>
         </ul>
       </div>
 
-      <div class="about-page__card">
-        <h1>About Me</h1>
-        <p>
+      <div class="about-page__card card">
+        <h1 class="about-page__h1">About Me</h1>
+        <br />
+        <p class="about-page__para">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
           fugit quia placeat adipisci! Necessitatibus libero harum impedit ipsam
           officia, atque facilis aliquam similique nulla est quo vel rerum unde
-          dolor?
+          dolor? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptates fugit quia placeat adipisci! Necessitatibus libero harum
+          impedit ipsam officia, atque facilis aliquam similique nulla est quo
+          vel rerum unde dolor?Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Voluptates fugit quia placeat adipisci!
+          Necessitatibus libero harum impedit ipsam officia, atque facilis
+          aliquam similique nulla est quo vel rerum unde dolor?
         </p>
       </div>
     </section>
 
+    <!--      Third Page    -->
     <section class="projects-page">
-      <div class="card card__projects">
-        <h1>My Projects</h1>
-        <p>
+      <div class="card">
+        <h1 class="card__h1">My Projects</h1>
+        <br />
+        <p class="card__para">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
           fugit quia placeat adipisci! Necessitatibus libero harum impedit ipsam
           officia, atque facilis aliquam similique nulla est quo vel rerum unde
@@ -52,28 +104,56 @@
         </p>
       </div>
 
-      <div class="card card__skills-list">
-        <div class="card__skill">
-          <p>Card 1</p>
-          <button>+</button>
+      <div class="card">
+        <div class="sec">
+          <button type="button" class="sec__collapsible">Project 1</button>
+          <button type="button" class="sec__collapsible sec__plus">+</button>
         </div>
-
-        <div class="card__separator-line"></div>
-
-        <div class="card__skill">
-          <p>Card 2</p>
-          <button>+</button>
+        <div class="content sec__content">
+          <p>
+            Project One description: Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Officia ex molestiae dolorem expedita iste
+            repellendus recusandae corporis, nostrum minus vel aliquid rerum
+            sequi veritatis dignissimos atque debitis ipsum quisquam laboriosam.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia ex
+            molestiae dolorem expedita iste repellendus recusandae corporis,
+            nostrum minus vel aliquid rerum sequi veritatis dignissimos atque
+            debitis ipsum quisquam laboriosam.
+          </p>
         </div>
-
-        <div class="card__skill">
-          <p>Card 3</p>
-          <button>+</button>
+        <br />
+        <div class="sec">
+          <button type="button" class="sec__collapsible">Project 2</button>
+          <button type="button" class="sec__collapsible sec__plus">+</button>
+        </div>
+        <div class="sec">
+          <button type="button" class="sec__collapsible">Project 3</button>
+          <button type="button" class="sec__collapsible sec__plus">+</button>
         </div>
       </div>
     </section>
 
     <footer>
-      <p>email@gmail.com</p>
+      <div class="footer">
+        <div class="footer__container">
+          <a href="https://github.com/litvinova08" target="”_blank”">
+            <img src="./images/github.png" alt="git icon" />
+          </a>
+        </div>
+        <div class="footer__container">
+          <a
+            href="https://www.linkedin.com/in/margarita-l-44860b15b/"
+            target="”_blank”"
+          >
+            <img src="./images/linkedin.png" alt="LinkedIn icon"
+          /></a>
+        </div>
+        <div class="footer__container footer__container--smaller">
+          <a href="mailto:ma.litvinova08@gmail.com">
+            <img src="./images/email.png" alt="Email icon"
+          /></a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

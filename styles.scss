@@ -3,42 +3,46 @@
 
 * {
   margin: 0;
+  font-family: "Libre Franklin", sans-serif;
 }
 
 //first page
 .first-page {
-  background-color: #0f0e0e;
+  background-image: linear-gradient($purple, $coral, $white);
+  background-size: cover;
   height: 100vh;
   width: 100vw;
 }
 
-.box {
+.name-box {
   @include modules.default-padding;
 
   &__my-name {
-    font-size: 42px;
-    font-family: Arial, Helvetica, sans-serif; //newake or Librefrankin
+    font-size: 54px;
     font-weight: 100;
     color: white;
   }
 
   &__title {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 100;
     color: white;
+    padding-top: 15px;
   }
 }
 
 .icons {
-  padding-left: 200px;
-  padding-top: 100px;
+  padding-left: $defaultpadding-left;
+  padding-top: 15px;
+  display: flex;
+  @include modules.default-icons;
 }
 
 //Second page
 .about-page {
   height: 100vh;
   width: 100vw;
-  background-color: #35c1f5;
+  background-color: #eeeded;
   display: flex;
   justify-content: row;
 
@@ -46,40 +50,86 @@
     @include modules.default-padding;
     width: 100%;
   }
+  @include modules.default-h1-and-para;
 }
 
-//third (projects) page
+.card {
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3px;
+    margin-bottom: 50px;
+  }
+
+  &__element {
+    border: 0.5px solid $grey;
+    font-size: 14px;
+    font-weight: 200;
+    padding: 15px 30px;
+    border-radius: 14px;
+    margin: 2px 15px;
+    color: white;
+
+    &--tech {
+      background-color: $lightblue;
+    }
+    &--tools {
+      background-color: $coral;
+    }
+    &--soft {
+      background-color: $purple;
+    }
+  }
+}
+
+//Third (projects) page
 .projects-page {
   height: 100vh;
   width: 100vw;
-  background-color: #bcb8b8;
+  background-color: white;
   display: flex;
   justify-content: row;
 }
 
 .card {
-  // border: 2px solid black;
   @include modules.default-padding;
   width: 100%;
+  @include modules.default-h1-and-para;
+}
 
-  &__projects {
+.sec {
+  display: flex;
+
+  &__collapsible {
+    background-color: white;
+    cursor: pointer;
+    padding: 18px;
     width: 100%;
-    padding-top: $defaultpadding-top;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 23px;
   }
 
-  &__skills-list {
-    width: 100%;
+  &__plus {
+    text-align: end;
   }
-
-  &__skill {
-    padding-bottom: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  &__content {
+    margin: 0 20px;
+    text-align: justify;
+    padding: 0 18px;
   }
 }
 
-footer {
+// FOOTER
+
+.footer {
   width: 100vw;
   height: 100px;
+  background-color: $purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include modules.default-icons;
 }

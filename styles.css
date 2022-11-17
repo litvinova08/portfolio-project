@@ -1,80 +1,164 @@
 * {
   margin: 0;
+  font-family: "Libre Franklin", sans-serif;
 }
 
 .first-page {
-  background-color: #0f0e0e;
+  background-image: linear-gradient(#512d6d, #f8485e, #eeeeee);
+  background-size: cover;
   height: 100vh;
   width: 100vw;
 }
 
-.box {
-  padding-left: 200px;
-  padding-top: 250px;
-  padding-right: 200px;
+.name-box {
+  padding-left: 100px;
+  padding-top: 200px;
+  padding-right: 100px;
 }
-.box__my-name {
-  font-size: 42px;
-  font-family: Arial, Helvetica, sans-serif;
+.name-box__my-name {
+  font-size: 54px;
   font-weight: 100;
   color: white;
 }
-.box__title {
-  font-size: 20px;
+.name-box__title {
+  font-size: 28px;
   font-weight: 100;
   color: white;
+  padding-top: 15px;
 }
 
 .icons {
-  padding-left: 200px;
-  padding-top: 100px;
+  padding-left: 100px;
+  padding-top: 15px;
+  display: flex;
+}
+.icons__container {
+  width: 40px;
+  height: 40px;
+}
+.icons__container--smaller {
+  width: 33px;
+  height: 33px;
+  padding-top: 7px;
+  padding-left: 7px;
+}
+.icons__container img {
+  width: 100%;
+  height: auto;
 }
 
 .about-page {
   height: 100vh;
   width: 100vw;
-  background-color: #35c1f5;
+  background-color: #eeeded;
   display: flex;
   justify-content: row;
 }
 .about-page__card {
-  padding-left: 200px;
-  padding-top: 250px;
-  padding-right: 200px;
+  padding-left: 100px;
+  padding-top: 200px;
+  padding-right: 100px;
   width: 100%;
+}
+.about-page__h1 {
+  font-size: 30px;
+  font-weight: 100;
+}
+.about-page__para {
+  font-size: 20px;
+}
+
+.card__list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3px;
+  margin-bottom: 50px;
+}
+.card__element {
+  border: 0.5px solid #d8d8d8;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 15px 30px;
+  border-radius: 14px;
+  margin: 2px 15px;
+  color: white;
+}
+.card__element--tech {
+  background-color: #00c1d4;
+}
+.card__element--tools {
+  background-color: #f8485e;
+}
+.card__element--soft {
+  background-color: #512d6d;
 }
 
 .projects-page {
   height: 100vh;
   width: 100vw;
-  background-color: #bcb8b8;
+  background-color: white;
   display: flex;
   justify-content: row;
 }
 
 .card {
-  padding-left: 200px;
-  padding-top: 250px;
-  padding-right: 200px;
+  padding-left: 100px;
+  padding-top: 200px;
+  padding-right: 100px;
   width: 100%;
 }
-.card__projects {
-  width: 100%;
-  padding-top: 250px;
+.card__h1 {
+  font-size: 30px;
+  font-weight: 100;
 }
-.card__skills-list {
-  width: 100%;
-}
-.card__skill {
-  padding-bottom: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.card__para {
+  font-size: 20px;
 }
 
-footer {
+.sec {
+  display: flex;
+}
+.sec__collapsible {
+  background-color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 23px;
+}
+.sec__plus {
+  text-align: end;
+}
+.sec__content {
+  margin: 0 20px;
+  text-align: justify;
+  padding: 0 18px;
+}
+
+.footer {
   width: 100vw;
   height: 100px;
+  background-color: #512d6d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__container {
+  width: 40px;
+  height: 40px;
+}
+.footer__container--smaller {
+  width: 33px;
+  height: 33px;
+  padding-top: 7px;
+  padding-left: 7px;
+}
+.footer__container img {
+  width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
