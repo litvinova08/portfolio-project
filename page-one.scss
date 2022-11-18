@@ -1,0 +1,11 @@
+@import "./partials";
+
+@mixin default-padding(
+  $defaultpadding--left,
+  $defaultpadding-right,
+  $defaultpadding-top
+) {
+  padding-left: $defaultpadding-left;
+  padding-top: $defaultpadding-top;
+  padding-right: $defaultpadding-right;
+}

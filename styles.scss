@@ -1,4 +1,5 @@
 @use "./modules.scss";
+@use "./page-one.scss";
 @import "./partials";
 
 * {
@@ -6,7 +7,6 @@
   font-family: "Libre Franklin", sans-serif;
 }
 
-//first page
 .first-page {
   background-image: linear-gradient($purple, $coral, $white);
   background-size: cover;
@@ -14,111 +14,424 @@
   width: 100vw;
 }
 
-.name-box {
-  @include modules.default-padding;
+@media only screen and (max-width: $sm) {
+  //Page One : max-width: 576px
+  .name-box {
+    padding-top: 150px;
+    padding-left: $defaultpadding-mobile-left;
 
-  &__my-name {
-    font-size: 54px;
-    font-weight: 100;
-    color: white;
+    &__my-name {
+      font-size: 44px;
+      font-weight: 100;
+      color: white;
+    }
+
+    &__title {
+      font-size: 28px;
+      font-weight: 100;
+      color: white;
+      padding-top: 20px;
+    }
   }
 
-  &__title {
-    font-size: 28px;
-    font-weight: 100;
-    color: white;
+  .icons {
     padding-top: 15px;
-  }
-}
-
-.icons {
-  padding-left: $defaultpadding-left;
-  padding-top: 15px;
-  display: flex;
-  @include modules.default-icons;
-}
-
-//Second page
-.about-page {
-  height: 100vh;
-  width: 100vw;
-  background-color: #eeeded;
-  display: flex;
-  justify-content: row;
-
-  &__card {
-    @include modules.default-padding;
-    width: 100%;
-  }
-  @include modules.default-h1-and-para;
-}
-
-.card {
-  &__list {
-    list-style-type: none;
+    padding-left: $defaultpadding-mobile-left;
     display: flex;
-    flex-wrap: wrap;
-    padding: 3px;
-    margin-bottom: 50px;
+    @include modules.default-icons;
   }
 
-  &__element {
-    border: 0.5px solid $grey;
-    font-size: 14px;
-    font-weight: 200;
-    padding: 15px 30px;
-    border-radius: 14px;
-    margin: 2px 15px;
-    color: white;
+  // //Page One : 576 - 1200px
+  // .name-box {
+  //   padding-top: 250px;
+  //   padding-left: 100px;
 
-    &--tech {
-      background-color: $lightblue;
+  //   &__my-name {
+  //     font-size: 54px;
+  //     font-weight: 100;
+  //     color: white;
+  //   }
+
+  //   &__title {
+  //     font-size: 35px;
+  //     font-weight: 100;
+  //     color: white;
+  //     padding-top: 20px;
+  //   }
+  // }
+
+  // .icons {
+  //   padding-top: 15px;
+  //   padding-left: 100px;
+  //   display: flex;
+  //   @include modules.default-icons;
+  // }
+
+  //  //Page One : width: 1200px ++
+  // .name-box {
+  //   @include modules.default-padding-desktop;
+
+  //   &__my-name {
+  //     font-size: 54px;
+  //     font-weight: 100;
+  //     color: white;
+  //   }
+
+  //   &__title {
+  //     font-size: 28px;
+  //     font-weight: 100;
+  //     color: white;
+  //     padding-top: 15px;
+  //   }
+  // }
+
+  // .icons {
+  //   padding-left: $defaultpadding-desktop-left;
+  //   padding-top: 15px;
+  //   display: flex;
+  //   @include modules.default-icons;
+  // }
+
+  //Page Two : max-width: 576px
+  .about-page {
+    background-color: #eeeded;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-left: $defaultpadding-mobile-left;
+    padding-right: 20px;
+    padding-bottom: 50px;
+
+    &__h1 {
+      font-size: 29px;
+      font-weight: 100;
+      color: $purple;
     }
-    &--tools {
-      background-color: $coral;
+
+    &__para {
+      font-size: 22px;
+      color: $purple;
+      text-align: justify;
     }
-    &--soft {
-      background-color: $purple;
+  }
+
+  .card {
+    &__list {
+      padding-inline-start: 0;
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+
+      margin-top: 40px;
+    }
+
+    &__element {
+      border: 0.5px solid $grey;
+      font-size: 22px;
+      font-weight: 200;
+      padding: 5px 10px;
+      border-radius: 10px;
+      margin: 2px 5px;
+      color: white;
+
+      &--tech {
+        background-color: $lightblue;
+      }
+      &--tools {
+        background-color: $coral;
+      }
+      &--soft {
+        background-color: $purple;
+      }
+    }
+  }
+
+  //Page Three : max-width: 576px
+  .projects-page {
+    background-color: #eeeded;
+    display: flex;
+    flex-direction: column;
+    padding-left: $defaultpadding-mobile-left;
+    padding-right: 20px;
+    color: $purple;
+  }
+
+  .card {
+    &__h1 {
+      font-size: 29px;
+      font-weight: 100;
+    }
+
+    &__para {
+      font-size: 22px;
+
+      text-align: justify;
+    }
+  }
+
+  .sec {
+    display: flex;
+
+    &__collapsible {
+      background-color: #eeeded;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 19px;
+    }
+
+    &__plus {
+      text-align: end;
+    }
+    &__content {
+      margin: 0 20px;
+      text-align: justify;
+      padding: 0 18px;
     }
   }
 }
 
-//Third (projects) page
-.projects-page {
-  height: 100vh;
-  width: 100vw;
-  background-color: white;
-  display: flex;
-  justify-content: row;
+@media only screen and ((min-width: ($sm + 1px)) and (max-width: $xl)) {
+  //Page One : 576 - 1200px
+  .name-box {
+    padding-top: 250px;
+    padding-left: 100px;
+
+    &__my-name {
+      font-size: 54px;
+      font-weight: 100;
+      color: white;
+    }
+
+    &__title {
+      font-size: 35px;
+      font-weight: 100;
+      color: white;
+      padding-top: 20px;
+    }
+  }
+
+  .icons {
+    padding-top: 15px;
+    padding-left: 100px;
+    display: flex;
+    @include modules.default-icons;
+  }
+
+  //Page Two : 576 - 1200px
+  .about-page {
+    // width: 100vw;
+    // height: 50vh;
+    background-color: #eeeded;
+    display: flex;
+    flex-direction: column-reverse;
+
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+
+    &__h1 {
+      font-size: 29px;
+      font-weight: 100;
+      color: $purple;
+    }
+
+    &__para {
+      font-size: 22px;
+      color: $purple;
+      text-align: justify;
+    }
+  }
+
+  .card {
+    &__list {
+      padding-inline-start: 0;
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+
+      margin-top: 40px;
+    }
+
+    &__element {
+      border: 0.5px solid $grey;
+      font-size: 22px;
+      font-weight: 200;
+      padding: 5px 10px;
+      border-radius: 10px;
+      margin: 2px 5px;
+      color: white;
+
+      &--tech {
+        background-color: $lightblue;
+      }
+      &--tools {
+        background-color: $coral;
+      }
+      &--soft {
+        background-color: $purple;
+      }
+    }
+  }
+
+  //Page Three : 576 - 1200px
+  .projects-page {
+    background-color: #eeeded;
+    display: flex;
+    flex-direction: column;
+    padding-left: $defaultpadding-mobile-left;
+    padding-right: 20px;
+    color: $purple;
+    // height: 50vh;
+    padding: 100px;
+  }
+
+  .card {
+    &__h1 {
+      font-size: 29px;
+      font-weight: 100;
+    }
+
+    &__para {
+      font-size: 22px;
+
+      text-align: justify;
+    }
+  }
+
+  .sec {
+    display: flex;
+
+    &__collapsible {
+      background-color: #eeeded;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 23px;
+    }
+
+    &__plus {
+      text-align: end;
+    }
+    &__content {
+      margin: 0 20px;
+      text-align: justify;
+      padding: 0 18px;
+    }
+  }
 }
 
-.card {
-  @include modules.default-padding;
-  width: 100%;
-  @include modules.default-h1-and-para;
-}
+@media only screen and (min-width: ($xl + 1px)) {
+  //Page One : width: 1200px ++
+  .name-box {
+    @include modules.default-padding-desktop;
 
-.sec {
-  display: flex;
+    &__my-name {
+      font-size: 54px;
+      font-weight: 100;
+      color: white;
+    }
 
-  &__collapsible {
+    &__title {
+      font-size: 28px;
+      font-weight: 100;
+      color: white;
+      padding-top: 15px;
+    }
+  }
+
+  .icons {
+    padding-left: $defaultpadding-desktop-left;
+    padding-top: 15px;
+    display: flex;
+    @include modules.default-icons;
+  }
+
+  //Page Two : width: 992px ++
+  .about-page {
+    height: 100vh;
+    width: 100vw;
+    background-color: #eeeded;
+    display: flex;
+    justify-content: row;
+
+    &__card {
+      @include modules.default-padding-desktop;
+      width: 100%;
+    }
+    @include modules.default-h1-and-para;
+  }
+
+  .card {
+    &__list {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 3px;
+      margin-bottom: 50px;
+    }
+
+    &__element {
+      border: 0.5px solid $grey;
+      font-size: 14px;
+      font-weight: 200;
+      padding: 15px 30px;
+      border-radius: 14px;
+      margin: 2px 15px;
+      color: white;
+
+      &--tech {
+        background-color: $lightblue;
+      }
+      &--tools {
+        background-color: $coral;
+      }
+      &--soft {
+        background-color: $purple;
+      }
+    }
+  }
+
+  //Page Three : width: 992px ++
+  .projects-page {
+    height: 100vh;
+    width: 100vw;
     background-color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 23px;
+    display: flex;
+    justify-content: row;
   }
 
-  &__plus {
-    text-align: end;
+  .card {
+    @include modules.default-padding-desktop;
+    width: 100%;
+    @include modules.default-h1-and-para;
   }
-  &__content {
-    margin: 0 20px;
-    text-align: justify;
-    padding: 0 18px;
+
+  .sec {
+    display: flex;
+
+    &__collapsible {
+      background-color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 23px;
+    }
+
+    &__plus {
+      text-align: end;
+    }
+    &__content {
+      margin: 0 20px;
+      text-align: justify;
+      padding: 0 18px;
+    }
   }
 }
 
@@ -133,3 +446,6 @@
   align-items: center;
   @include modules.default-icons;
 }
+
+//251
+//405

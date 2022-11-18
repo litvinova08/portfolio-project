@@ -1,9 +1,9 @@
 @import "./partials";
 
-@mixin default-padding {
-  padding-left: $defaultpadding-left;
-  padding-top: $defaultpadding-top;
-  padding-right: $defaultpadding-right;
+@mixin default-padding-desktop {
+  padding-left: $defaultpadding-desktop-left;
+  padding-top: $defaultpadding-desktop-top;
+  padding-right: $defaultpadding-desktop-right;
 }
 
 @mixin default-icons {

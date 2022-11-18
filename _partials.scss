@@ -1,9 +1,15 @@
-$defaultpadding-left: 100px;
-$defaultpadding-top: 200px;
-$defaultpadding-right: 100px;
+$defaultpadding-desktop-left: 100px;
+$defaultpadding-desktop-top: 200px;
+$defaultpadding-desktop-right: 100px;
+
+$defaultpadding-mobile-left: 20px;
 
 $purple: #512d6d;
 $coral: #f8485e;
 $white: #eeeeee;
 $lightblue: #00c1d4;
 $grey: #d8d8d8;
+
+$xs: 0;
+$sm: 576px;
+$xl: 1200px;
