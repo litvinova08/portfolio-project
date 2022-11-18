@@ -7,13 +7,11 @@
   background-image: linear-gradient(#512d6d, #f8485e, #eeeeee);
   background-size: cover;
   height: 100vh;
-  width: 100vw;
 }
 
 @media only screen and (max-width: 576px) {
   .name-box {
-    padding-top: 150px;
-    padding-left: 20px;
+    padding: 150px 20px 0 20px;
   }
   .name-box__my-name {
     font-size: 44px;
@@ -48,10 +46,11 @@
   .about-page {
     background-color: #eeeded;
     display: flex;
-    flex-direction: column-reverse;
+    padding-top: 0;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 50px;
+    flex-direction: column-reverse;
   }
   .about-page__h1 {
     font-size: 29px;
@@ -72,7 +71,7 @@
   }
   .card__element {
     border: 0.5px solid #d8d8d8;
-    font-size: 22px;
+    font-size: font-size;
     font-weight: 200;
     padding: 5px 10px;
     border-radius: 10px;
@@ -99,9 +98,11 @@
   .card__h1 {
     font-size: 29px;
     font-weight: 100;
+    color: #512d6d;
   }
   .card__para {
     font-size: 22px;
+    color: #512d6d;
     text-align: justify;
   }
   .sec {
@@ -109,6 +110,7 @@
   }
   .sec__collapsible {
     background-color: #eeeded;
+    color: #512d6d;
     padding: 18px;
     width: 100%;
     border: none;
@@ -127,8 +129,7 @@
 }
 @media only screen and ((min-width: 577px) and (max-width: 1200px)) {
   .name-box {
-    padding-top: 250px;
-    padding-left: 100px;
+    padding: 250px 0 0 100px;
   }
   .name-box__my-name {
     font-size: 54px;
@@ -163,10 +164,11 @@
   .about-page {
     background-color: #eeeded;
     display: flex;
-    flex-direction: column-reverse;
+    padding-top: 100px;
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 50px;
+    flex-direction: column-reverse;
   }
   .about-page__h1 {
     font-size: 29px;
@@ -187,7 +189,7 @@
   }
   .card__element {
     border: 0.5px solid #d8d8d8;
-    font-size: 22px;
+    font-size: font-size;
     font-weight: 200;
     padding: 5px 10px;
     border-radius: 10px;
@@ -207,7 +209,7 @@
     background-color: #eeeded;
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
+    padding-left: 100px;
     padding-right: 20px;
     color: #512d6d;
     padding: 100px;
@@ -215,9 +217,11 @@
   .card__h1 {
     font-size: 29px;
     font-weight: 100;
+    color: #512d6d;
   }
   .card__para {
     font-size: 22px;
+    color: #512d6d;
     text-align: justify;
   }
   .sec {
@@ -225,6 +229,7 @@
   }
   .sec__collapsible {
     background-color: #eeeded;
+    color: #512d6d;
     padding: 18px;
     width: 100%;
     border: none;
@@ -243,9 +248,7 @@
 }
 @media only screen and (min-width: 1201px) {
   .name-box {
-    padding-left: 100px;
-    padding-top: 200px;
-    padding-right: 100px;
+    padding: 200px 100px 0 100px;
   }
   .name-box__my-name {
     font-size: 54px;
@@ -259,8 +262,8 @@
     padding-top: 15px;
   }
   .icons {
-    padding-left: 100px;
     padding-top: 15px;
+    padding-left: 100px;
     display: flex;
   }
   .icons__container {
@@ -278,35 +281,34 @@
     height: auto;
   }
   .about-page {
-    height: 100vh;
-    width: 100vw;
     background-color: #eeeded;
     display: flex;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
     justify-content: row;
   }
-  .about-page__card {
-    padding-left: 100px;
-    padding-top: 200px;
-    padding-right: 100px;
-    width: 100%;
-  }
   .about-page__h1 {
-    font-size: 30px;
+    font-size: 29px;
     font-weight: 100;
+    color: #512d6d;
   }
   .about-page__para {
-    font-size: 20px;
+    font-size: 22px;
+    color: #512d6d;
+    text-align: justify;
   }
   .card__list {
+    padding-inline-start: 0;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     padding: 3px;
-    margin-bottom: 50px;
   }
   .card__element {
     border: 0.5px solid #d8d8d8;
-    font-size: 14px;
+    font-size: font-size;
     font-weight: 200;
     padding: 15px 30px;
     border-radius: 14px;
@@ -323,31 +325,38 @@
     background-color: #512d6d;
   }
   .projects-page {
-    height: 100vh;
-    width: 100vw;
-    background-color: white;
+    background-color: #eeeded;
     display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    padding-right: 20px;
+    color: #512d6d;
+    height: 80vh;
     justify-content: row;
-  }
-  .card {
     padding-left: 100px;
     padding-top: 200px;
     padding-right: 100px;
+  }
+  .card {
     width: 100%;
+    padding-right: 100px;
   }
   .card__h1 {
-    font-size: 30px;
+    font-size: 29px;
     font-weight: 100;
+    color: #512d6d;
   }
   .card__para {
-    font-size: 20px;
+    font-size: 22px;
+    color: #512d6d;
+    text-align: justify;
   }
   .sec {
     display: flex;
   }
   .sec__collapsible {
-    background-color: white;
-    cursor: pointer;
+    background-color: #eeeded;
+    color: #512d6d;
     padding: 18px;
     width: 100%;
     border: none;
@@ -365,7 +374,6 @@
   }
 }
 .footer {
-  width: 100vw;
   height: 100px;
   background-color: #512d6d;
   display: flex;

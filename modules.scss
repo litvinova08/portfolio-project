@@ -27,10 +27,14 @@
 
 @mixin default-h1-and-para {
   &__h1 {
-    font-size: 30px;
+    font-size: 29px;
     font-weight: 100;
+    color: $purple;
   }
+
   &__para {
-    font-size: 20px;
+    font-size: 22px;
+    color: $purple;
+    text-align: justify;
   }
 }

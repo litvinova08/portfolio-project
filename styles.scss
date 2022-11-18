@@ -1,5 +1,8 @@
 @use "./modules.scss";
+@use "./devices.scss";
 @use "./page-one.scss";
+@use "./page-two.scss";
+@use "./page-three.scss";
 @import "./partials";
 
 * {
@@ -11,434 +14,177 @@
   background-image: linear-gradient($purple, $coral, $white);
   background-size: cover;
   height: 100vh;
-  width: 100vw;
 }
 
-@media only screen and (max-width: $sm) {
+@include devices.mobile {
   //Page One : max-width: 576px
   .name-box {
-    padding-top: 150px;
-    padding-left: $defaultpadding-mobile-left;
+    padding: 150px 20px 0 20px;
 
     &__my-name {
-      font-size: 44px;
-      font-weight: 100;
-      color: white;
+      @include page-one.about-page-text(44px);
     }
 
     &__title {
-      font-size: 28px;
-      font-weight: 100;
-      color: white;
+      @include page-one.about-page-text(28px);
       padding-top: 20px;
     }
   }
 
   .icons {
-    padding-top: 15px;
-    padding-left: $defaultpadding-mobile-left;
-    display: flex;
-    @include modules.default-icons;
+    @include page-one.about-page-icons($defaultpadding-mobile-left);
   }
-
-  // //Page One : 576 - 1200px
-  // .name-box {
-  //   padding-top: 250px;
-  //   padding-left: 100px;
-
-  //   &__my-name {
-  //     font-size: 54px;
-  //     font-weight: 100;
-  //     color: white;
-  //   }
-
-  //   &__title {
-  //     font-size: 35px;
-  //     font-weight: 100;
-  //     color: white;
-  //     padding-top: 20px;
-  //   }
-  // }
-
-  // .icons {
-  //   padding-top: 15px;
-  //   padding-left: 100px;
-  //   display: flex;
-  //   @include modules.default-icons;
-  // }
-
-  //  //Page One : width: 1200px ++
-  // .name-box {
-  //   @include modules.default-padding-desktop;
-
-  //   &__my-name {
-  //     font-size: 54px;
-  //     font-weight: 100;
-  //     color: white;
-  //   }
-
-  //   &__title {
-  //     font-size: 28px;
-  //     font-weight: 100;
-  //     color: white;
-  //     padding-top: 15px;
-  //   }
-  // }
-
-  // .icons {
-  //   padding-left: $defaultpadding-desktop-left;
-  //   padding-top: 15px;
-  //   display: flex;
-  //   @include modules.default-icons;
-  // }
 
   //Page Two : max-width: 576px
   .about-page {
-    background-color: #eeeded;
-    display: flex;
+    @include page-two.about-me-section(
+      0,
+      $defaultpadding-mobile-left,
+      $defaultpadding-mobile-right
+    );
     flex-direction: column-reverse;
-    padding-left: $defaultpadding-mobile-left;
-    padding-right: 20px;
-    padding-bottom: 50px;
-
-    &__h1 {
-      font-size: 29px;
-      font-weight: 100;
-      color: $purple;
-    }
-
-    &__para {
-      font-size: 22px;
-      color: $purple;
-      text-align: justify;
-    }
+    @include modules.default-h1-and-para;
   }
 
   .card {
     &__list {
-      padding-inline-start: 0;
-      list-style-type: none;
-      display: flex;
-      flex-wrap: wrap;
-
+      @include page-two.list-style;
       margin-top: 40px;
     }
 
-    &__element {
-      border: 0.5px solid $grey;
-      font-size: 22px;
-      font-weight: 200;
-      padding: 5px 10px;
-      border-radius: 10px;
-      margin: 2px 5px;
-      color: white;
-
-      &--tech {
-        background-color: $lightblue;
-      }
-      &--tools {
-        background-color: $coral;
-      }
-      &--soft {
-        background-color: $purple;
-      }
-    }
+    @include page-two.element(22px, 5px, 10px, 10px, 5px);
   }
 
   //Page Three : max-width: 576px
   .projects-page {
-    background-color: #eeeded;
-    display: flex;
-    flex-direction: column;
-    padding-left: $defaultpadding-mobile-left;
-    padding-right: 20px;
-    color: $purple;
+    @include page-three.projects-page($defaultpadding-mobile-left);
   }
 
   .card {
-    &__h1 {
-      font-size: 29px;
-      font-weight: 100;
-    }
-
-    &__para {
-      font-size: 22px;
-
-      text-align: justify;
-    }
+    @include modules.default-h1-and-para;
   }
 
   .sec {
-    display: flex;
-
-    &__collapsible {
-      background-color: #eeeded;
-      padding: 18px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 19px;
-    }
-
-    &__plus {
-      text-align: end;
-    }
-    &__content {
-      margin: 0 20px;
-      text-align: justify;
-      padding: 0 18px;
-    }
+    @include page-three.collapsible-section(19px);
   }
 }
 
-@media only screen and ((min-width: ($sm + 1px)) and (max-width: $xl)) {
+@include devices.tablet {
   //Page One : 576 - 1200px
   .name-box {
-    padding-top: 250px;
-    padding-left: 100px;
+    padding: 250px 0 0 100px;
 
     &__my-name {
-      font-size: 54px;
-      font-weight: 100;
-      color: white;
+      @include page-one.about-page-text(54px);
     }
 
     &__title {
-      font-size: 35px;
-      font-weight: 100;
-      color: white;
+      @include page-one.about-page-text(35px);
       padding-top: 20px;
     }
   }
 
   .icons {
-    padding-top: 15px;
-    padding-left: 100px;
-    display: flex;
-    @include modules.default-icons;
+    @include page-one.about-page-icons($defaultpadding-tablet-left);
   }
 
   //Page Two : 576 - 1200px
   .about-page {
-    // width: 100vw;
-    // height: 50vh;
-    background-color: #eeeded;
-    display: flex;
+    @include page-two.about-me-section(
+      $defaultpadding-tablet-top,
+      $defaultpadding-tablet-left,
+      $defaultpadding-tablet-right
+    );
+
     flex-direction: column-reverse;
-
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-bottom: 50px;
-
-    &__h1 {
-      font-size: 29px;
-      font-weight: 100;
-      color: $purple;
-    }
-
-    &__para {
-      font-size: 22px;
-      color: $purple;
-      text-align: justify;
-    }
+    @include modules.default-h1-and-para;
   }
 
   .card {
     &__list {
-      padding-inline-start: 0;
-      list-style-type: none;
-      display: flex;
-      flex-wrap: wrap;
-
+      @include page-two.list-style;
       margin-top: 40px;
     }
 
-    &__element {
-      border: 0.5px solid $grey;
-      font-size: 22px;
-      font-weight: 200;
-      padding: 5px 10px;
-      border-radius: 10px;
-      margin: 2px 5px;
-      color: white;
-
-      &--tech {
-        background-color: $lightblue;
-      }
-      &--tools {
-        background-color: $coral;
-      }
-      &--soft {
-        background-color: $purple;
-      }
-    }
+    @include page-two.element(22px, 5px, 10px, 10px, 5px);
   }
 
   //Page Three : 576 - 1200px
   .projects-page {
-    background-color: #eeeded;
-    display: flex;
-    flex-direction: column;
-    padding-left: $defaultpadding-mobile-left;
-    padding-right: 20px;
-    color: $purple;
-    // height: 50vh;
+    @include page-three.projects-page($defaultpadding-tablet-left);
     padding: 100px;
   }
 
   .card {
-    &__h1 {
-      font-size: 29px;
-      font-weight: 100;
-    }
-
-    &__para {
-      font-size: 22px;
-
-      text-align: justify;
-    }
+    @include modules.default-h1-and-para;
   }
 
   .sec {
-    display: flex;
-
-    &__collapsible {
-      background-color: #eeeded;
-      padding: 18px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 23px;
-    }
-
-    &__plus {
-      text-align: end;
-    }
-    &__content {
-      margin: 0 20px;
-      text-align: justify;
-      padding: 0 18px;
-    }
+    @include page-three.collapsible-section(23px);
   }
 }
 
-@media only screen and (min-width: ($xl + 1px)) {
+@include devices.desktop {
   //Page One : width: 1200px ++
   .name-box {
-    @include modules.default-padding-desktop;
+    padding: $defaultpadding-desktop-top $defaultpadding-desktop-right 0
+      $defaultpadding-desktop-left;
 
     &__my-name {
-      font-size: 54px;
-      font-weight: 100;
-      color: white;
+      @include page-one.about-page-text(54px);
     }
 
     &__title {
-      font-size: 28px;
-      font-weight: 100;
-      color: white;
+      @include page-one.about-page-text(28px);
       padding-top: 15px;
     }
   }
 
   .icons {
-    padding-left: $defaultpadding-desktop-left;
-    padding-top: 15px;
-    display: flex;
-    @include modules.default-icons;
+    @include page-one.about-page-icons($defaultpadding-desktop-left);
   }
 
-  //Page Two : width: 992px ++
+  //Page Two : width: 1200px ++
   .about-page {
-    height: 100vh;
-    width: 100vw;
-    background-color: #eeeded;
-    display: flex;
+    @include page-two.about-me-section(
+      $defaultpadding-tablet-top,
+      $defaultpadding-desktop-left,
+      $defaultpadding-desktop-right
+    );
     justify-content: row;
-
-    &__card {
-      @include modules.default-padding-desktop;
-      width: 100%;
-    }
     @include modules.default-h1-and-para;
   }
 
   .card {
     &__list {
-      list-style-type: none;
-      display: flex;
-      flex-wrap: wrap;
+      @include page-two.list-style;
       padding: 3px;
-      margin-bottom: 50px;
     }
 
-    &__element {
-      border: 0.5px solid $grey;
-      font-size: 14px;
-      font-weight: 200;
-      padding: 15px 30px;
-      border-radius: 14px;
-      margin: 2px 15px;
-      color: white;
-
-      &--tech {
-        background-color: $lightblue;
-      }
-      &--tools {
-        background-color: $coral;
-      }
-      &--soft {
-        background-color: $purple;
-      }
-    }
+    @include page-two.element(14px, 15px, 30px, 14px, 15px);
   }
 
-  //Page Three : width: 992px ++
+  //Page Three : width: 1200px ++
   .projects-page {
-    height: 100vh;
-    width: 100vw;
-    background-color: white;
-    display: flex;
+    @include page-three.projects-page($defaultpadding-desktop-left);
+    height: 80vh;
     justify-content: row;
+    @include modules.default-padding-desktop;
   }
 
   .card {
-    @include modules.default-padding-desktop;
     width: 100%;
+    padding-right: 100px;
     @include modules.default-h1-and-para;
   }
 
   .sec {
-    display: flex;
-
-    &__collapsible {
-      background-color: white;
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 23px;
-    }
-
-    &__plus {
-      text-align: end;
-    }
-    &__content {
-      margin: 0 20px;
-      text-align: justify;
-      padding: 0 18px;
-    }
+    @include page-three.collapsible-section(23px);
   }
 }
 
 // FOOTER
-
 .footer {
-  width: 100vw;
   height: 100px;
   background-color: $purple;
   display: flex;
@@ -446,6 +192,3 @@
   align-items: center;
   @include modules.default-icons;
 }
-
-//251
-//405

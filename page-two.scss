@@ -1,0 +1,46 @@
+@use "./modules.scss";
+@import "./partials";
+
+@mixin about-me-section($padding-top, $padding-left, $padding-right) {
+  background-color: $background-color;
+  display: flex;
+  padding-top: $padding-top;
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+  padding-bottom: 50px;
+}
+
+@mixin list-style {
+  padding-inline-start: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin element(
+  $font-size,
+  $padding-t-b,
+  $padding-l-r,
+  $border-radius,
+  $margin-l-r
+) {
+  &__element {
+    border: 0.5px solid $grey;
+    font-size: font-size;
+    font-weight: 200;
+    padding: $padding-t-b $padding-l-r;
+    border-radius: $border-radius;
+    margin: 2px $margin-l-r;
+    color: white;
+
+    &--tech {
+      background-color: $lightblue;
+    }
+    &--tools {
+      background-color: $coral;
+    }
+    &--soft {
+      background-color: $purple;
+    }
+  }
+}
