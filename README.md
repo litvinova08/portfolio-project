@@ -1,8 +1,9 @@
-#Portfolio
+# Portfolio
 
 This is an MVP of my portfolio website
 
-##Roadmap
+## Roadmap
+
 I am working on adding some interactivity as below:
 
 1. the project window will collapse once + is clicked;
@@ -10,8 +11,10 @@ I am working on adding some interactivity as below:
 3. some animation when scrolling the page
 4. Navigation menu
 
-##Author
+## Author
+
 Margarita Litvinova
 
-##Project Status
+## Project Status
+
 In progress
