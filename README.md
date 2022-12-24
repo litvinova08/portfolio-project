@@ -18,3 +18,5 @@ Margarita Litvinova
 ## Project Status
 
 In progress
+
+![This is a project image](./assets/portfolio.png)
