@@ -26,6 +26,7 @@ This is my first project that I completed during the \_Nology program.
 ## Future Goals
 
 - Rebuild the portfolio with React
+- Create directories to improve navigation through the project folder
 - Replace icons with icons from the libraries (https://fontawesome.com/icons)
 - Add headings for skill categories
 - Update stying and add interactivity (e.g. collapsible project cards)
