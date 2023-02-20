@@ -18,3 +18,14 @@ Margarita Litvinova
 ## Project Status
 
 In progress
+
+- Margin-bottom to avoid break;
+- Replace icons with others from the libraries of SVG images https://fontawesome.com/icons
+- Add icons for skills
+- Add a heading for skills for categories
+- Add a screenshot or some visual to projects
+- Rebuild portfolio with React once it is done
+- Add download resume
+- Add gradient animation on my name
+- Collapsible section : https://www.w3schools.com/howto/howto_js_collapsible.asp
+- add hover reaction: https://www.apple.com/au/store
